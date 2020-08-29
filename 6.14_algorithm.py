@@ -1,5 +1,14 @@
-nucleo_1="ACC"
-nucleo_2="ACAAG"
+# -*- coding: utf-8 -*-
+
+#nucleo_1="ACC"
+#nucleo_2="ACAAG"
+with open('first.txt', 'r') as file:
+        nucleo_1= file.read()
+print(nucleo_1)
+with open('second.txt', 'r') as file:
+        nucleo_2 = file.read().replace('\n', '')
+
+
 print("lenght1" , len(nucleo_1))
 print("lenght2" , len(nucleo_2))
 
@@ -128,7 +137,6 @@ both_less(nucleo_1, nucleo_2, round)
 
 explanation="""
 Explanation:
-
 Οπότε σύμφωνα με τα παραπάνω πειράματα,
 υπάρχουν οι εξής εκδοχές(ζεύγη):
 (θα αναφερθώ στα μήκη του εκάστοτε νουκλεοτιδίου ώς m και n),
@@ -181,6 +189,5 @@ Explanation:
 
 
 """
-
-
 print(explanation)
+
