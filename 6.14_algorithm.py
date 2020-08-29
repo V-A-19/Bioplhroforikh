@@ -11,12 +11,7 @@ def remove_from_bigger(nucleo_1, nucleo_2):
         nucleo_2=nucleo_2[:-2]
         nucleo_1=nucleo_1[:-1]
 
-    #if len(nucleo_1)==0 or len(nucleo_2)==0:
     return nucleo_1,nucleo_2
-    #else:
-    #    remove_from_bigger(nucleo_1, nucleo_2)
-    #    print(nucleo_1)
-    #    print(nucleo_2)
 
 
 def remove_from_smaller(nucleo_1, nucleo_2):
@@ -34,6 +29,8 @@ def remove_from_smaller(nucleo_1, nucleo_2):
 round=1
 print("Starting nucleotides are: {} and {}".format(nucleo_1, nucleo_2))
 
+print("The algorithm used now will be: 1st player removes 2 from the biggest\
+sequence and 1 from the smallest and the 2nd player the opposite.")
 def first_most(nucleo_1, nucleo_2, round):
     while True:
         print("\nRound {}".format(round))
@@ -56,9 +53,8 @@ def first_most(nucleo_1, nucleo_2, round):
 
 first_most(nucleo_1, nucleo_2, round)
 
-print("\nNow for a little change.")
-print("Let's assume both players remove 2 nucleotides from the sequence with\
-the most. Who will win?\n")
+print("The algorithm used now will be: 1st player removes 2 from the biggest\
+sequence and 1 from the smallest and the 2nd player the same.")
 def both_most(nucleo_1, nucleo_2, round):
     while True:
         print("\nRound {}".format(round))
@@ -81,10 +77,9 @@ def both_most(nucleo_1, nucleo_2, round):
 both_most(nucleo_1, nucleo_2, round)
 
 
-print("\nIs it just random that player 1 always wins?")
-print("what if player 1 was removing only 1 nucleotide from the biggest\
-suquence each time?")
 
+print("The algorithm used now will be: 1st player removes 1 from the biggest\
+sequence and 2 from the smallest and the 2nd player the opposite.")
 def first_less(nucleo_1, nucleo_2, round):
     while True:
         print("\nRound {}".format(round))
@@ -106,7 +101,8 @@ def first_less(nucleo_1, nucleo_2, round):
 
 first_less(nucleo_1, nucleo_2, round)
 
-print("\n NOW BOTH LESS")
+print("The algorithm used now will be: 1st player removes 1 from the biggest\
+sequence and 2 from the smallest and the 2nd player the same.")
 def both_less(nucleo_1, nucleo_2, round):
     while True:
         print("\nRound {}".format(round))
