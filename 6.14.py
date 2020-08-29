@@ -1,5 +1,9 @@
-first="AAATTCCGU"#τυχαία πρέπει να μπουν συγκεκριμένες
-second="AT"
+f = open("first.txt", "r")
+first=f.read()
+f.close()
+ff = open("second.text","r")
+second=ff.read()
+ff.close()
 player=1
 cont=True
 print("Welcome players")
@@ -48,6 +52,6 @@ while cont==True :
       if player==1 : 
        player=2
       elif player==2 : 
-       player=1
+       player=1 
      
      
