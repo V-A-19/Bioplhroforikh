@@ -29,31 +29,21 @@ def remove_from_smaller(nucleo_1, nucleo_2):
         nucleo_1=nucleo_1[:-2]
 
     return nucleo_1,nucleo_2
-    #print(nucleo_1)
-    #print(nucleo_2)
 
 round=1
-#print("Starting nucleotides are: {} and {}".format(nucleo_1, nucleo_2))
 
 print("The algorithm used now will be: 1st player removes 2 from the biggest\
 sequence and 1 from the smallest and the 2nd player the opposite.")
 def first_most(nucleo_1, nucleo_2, round):
     while True:
-    #    print("\nRound {}".format(round))
-     #   print("player 1")
         if len(nucleo_1)==0 or len(nucleo_2)==0:
             print("player 2 wins")
             break
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
-        #print(nucleo_1)
-        #print(nucleo_2)
         if len(nucleo_1)==0 or len(nucleo_2)==0:
             print("player 1 wins")
             break
-      #  print("player 2")
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
-        #print(nucleo_1)
-        #print(nucleo_2)
         round+=1
 
 
@@ -63,21 +53,14 @@ print("The algorithm used now will be: 1st player removes 2 from the biggest\
 sequence and 1 from the smallest and the 2nd player the same.")
 def both_most(nucleo_1, nucleo_2, round):
     while True:
-       # print("\nRound {}".format(round))
         if len(nucleo_1)==0 or len(nucleo_2)==0:
             print("player 2 wins")
             break
-        #print("player 1")
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
-        #print(nucleo_1)
-        #print(nucleo_2)
         if len(nucleo_1)==0 or len(nucleo_2)==0:
             print("player 1 wins")
             break
-        #print("player 2")
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
-        #print(nucleo_1)
-        #print(nucleo_2)
         round+=1
         
 both_most(nucleo_1, nucleo_2, round)
@@ -88,21 +71,14 @@ print("The algorithm used now will be: 1st player removes 1 from the biggest\
 sequence and 2 from the smallest and the 2nd player the opposite.")
 def first_less(nucleo_1, nucleo_2, round):
     while True:
-        #print("\nRound {}".format(round))
         if len(nucleo_1)==0 or len(nucleo_2)==0:
             print("player 2 wins")
             break
-        #print("player 1")
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
-        #print(nucleo_1)
-        #print(nucleo_2)
         if len(nucleo_1)==0 or len(nucleo_2)==0:
             print("player 1 wins")
             break
-        #print("player 2")
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
-        #print(nucleo_1)
-        #print(nucleo_2)
         round+=1
 
 first_less(nucleo_1, nucleo_2, round)
@@ -111,21 +87,14 @@ print("The algorithm used now will be: 1st player removes 1 from the biggest\
 sequence and 2 from the smallest and the 2nd player the same.")
 def both_less(nucleo_1, nucleo_2, round):
     while True:
-       # print("\nRound {}".format(round))
         if len(nucleo_1)==0 or len(nucleo_2)==0:
             print("player 2 wins")
             break
-        #print("player 1")
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
-        #print(nucleo_1)
-        #print(nucleo_2)
         if len(nucleo_1)==0 or len(nucleo_2)==0:
             print("player 1 wins")
             break
-        #print("player 2")
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
-        #print(nucleo_1)
-        #print(nucleo_2)
         round+=1
 
 both_less(nucleo_1, nucleo_2, round)
