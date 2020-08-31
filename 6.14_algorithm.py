@@ -37,11 +37,11 @@ sequence and 1 from the smallest and the 2nd player the opposite.")
 def first_most(nucleo_1, nucleo_2, round):
     while True:
         if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 2 wins")
+            print("player 1 wins")
             break
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
         if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 1 wins")
+            print("player 2 wins")
             break
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
         round+=1
@@ -54,11 +54,11 @@ sequence and 1 from the smallest and the 2nd player the same.")
 def both_most(nucleo_1, nucleo_2, round):
     while True:
         if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 2 wins")
+            print("player 1 wins")
             break
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
         if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 1 wins")
+            print("player 2 wins")
             break
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
         round+=1
@@ -72,11 +72,11 @@ sequence and 2 from the smallest and the 2nd player the opposite.")
 def first_less(nucleo_1, nucleo_2, round):
     while True:
         if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 2 wins")
+            print("player 1 wins")
             break
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
         if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 1 wins")
+            print("player 2 wins")
             break
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
         round+=1
@@ -88,11 +88,11 @@ sequence and 2 from the smallest and the 2nd player the same.")
 def both_less(nucleo_1, nucleo_2, round):
     while True:
         if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 2 wins")
+            print("player 1 wins")
             break
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
         if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 1 wins")
+            print("player 2 wins")
             break
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
         round+=1
@@ -129,25 +129,25 @@ Explanation:
 
 Σύμφωνα με τα παραπάνω δημιουργείται ο παρακάτω πίνακας:
 |Συνδυασμός περίπτωσης με μέθοδο | Νικητής  |
-| 1 με 5                        | παίκτης1 |
-| 1 με 6                        | παίκτης1 |
-| 1 με 7                        | παίκτης1 |
-| 1 με 8                        | παίκτης2 |
+| 1 με 5                        | παίκτης2 |
+| 1 με 6                        | παίκτης2 |
+| 1 με 7                        | παίκτης2 |
+| 1 με 8                        | παίκτης1 |
 
-| 2 με 5                        | παίκτης2 |
-| 2 με 6                        | παίκτης2 |
-| 2 με 7                        | παίκτης1 |
-| 2 με 8                        | παίκτης1 |
+| 2 με 5                        | παίκτης1 |
+| 2 με 6                        | παίκτης1 |
+| 2 με 7                        | παίκτης2 |
+| 2 με 8                        | παίκτης2 |
 
-| 3 με 5                        | παίκτης2 |
-| 3 με 6                        | παίκτης2 |
-| 3 με 7                        | παίκτης1|
-| 3 με 8                        | παίκτης1 |
+| 3 με 5                        | παίκτης1 |
+| 3 με 6                        | παίκτης1 |
+| 3 με 7                        | παίκτης2|
+| 3 με 8                        | παίκτης2 |
 
-| 4 με 5                        | παίκτης1 |
-| 4 με 6                        | παίκτης2 |
-| 4 με 7                        | παίκτης1 |
-| 4 με 8                        | παίκτης2 |
+| 4 με 5                        | παίκτης2 |
+| 4 με 6                        | παίκτης1 |
+| 4 με 7                        | παίκτης2 |
+| 4 με 8                        | παίκτης1 |
 
 Οπότε σε κάθε γύρο θα πρέπει να υπολογίζεται εκ νέου το ποιος παικτης παίζει
 και σε ποιον συνδυασμο ανηκουν οι αλληλουχίες εκεινης της στιγμής για να βγει
