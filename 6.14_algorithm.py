@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-#nucleo_1="ACC"
-#nucleo_2="ACAAG"
 with open('first.txt', 'r') as file:
         nucleo_1= file.read()
 with open('second.txt', 'r') as file:
